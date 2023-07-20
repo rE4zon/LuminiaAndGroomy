@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: d5860ed27c0bbf748abf64e6036b5b0b
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 985ff415e8e4a2944a611c266dc08b6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 2c835da688a117349b43fd9f4b2c7173, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: ad5978f80b4c69845a842e3b36394c8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 8fee78d57f1ae684e9a0e7ee9b4db32e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: 9ee2cb2319e3caa469324cfa5259522c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.009
+    second: {fileID: 2100000, guid: a39ae56d7068a3146ae5cec5dacc2eca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shoe_Red-CC0000
+    second: {fileID: 2100000, guid: 496bc9a8377faaf4688722db3d53a626, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Show_White-D9D9D9
+    second: {fileID: 2100000, guid: ef5f1850074600445aa48be2326fd2df, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Hips' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: bulb(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Vert
+      parentName: bulb(Clone)
+      position: {x: -0, y: 0.81997144, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 119.12198, y: 119.12198, z: 119.12198}
+    - name: Vert.002
+      parentName: bulb(Clone)
+      position: {x: -0, y: 0.9982002, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 32.43602, y: 32.43602, z: 32.43602}
+    - name: CurlyCurve
+      parentName: bulb(Clone)
+      position: {x: -0.0013494875, y: 1.074578, z: -0.0009943598}
+      rotation: {x: 0.05764846, y: 0.99828315, z: 0.010112676, w: -0.0022944398}
+      scale: {x: 4.4597564, y: 4.4597554, z: 4.459756}
+    - name: NurbsPath
+      parentName: bulb(Clone)
+      position: {x: -0.04737684, y: 1.0237314, z: -0.0019651204}
+      rotation: {x: -0.4047218, y: -0.40472177, z: 0.5798278, w: 0.57982785}
+      scale: {x: 2.1323404, y: 2.1323404, z: 2.1323404}
+    - name: NurbsPath.001
+      parentName: bulb(Clone)
+      position: {x: 0.043838434, y: 1.0318307, z: -0.0019651204}
+      rotation: {x: -0.4047218, y: -0.40472177, z: 0.5798278, w: 0.57982785}
+      scale: {x: 2.1323404, y: 2.1323404, z: 2.1323404}
+    - name: Vert.003
+      parentName: bulb(Clone)
+      position: {x: 0.039246704, y: 1.1439334, z: -0.001536039}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 10.57557, y: 10.57557, z: 10.57557}
+    - name: Vert.001
+      parentName: bulb(Clone)
+      position: {x: 0.039246704, y: 1.1439334, z: 0.014639529}
+      rotation: {x: -0.70710677, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 6.8599277, y: 6.8599277, z: 6.8599277}
+    - name: NurbsPath.002
+      parentName: bulb(Clone)
+      position: {x: 0.0025329967, y: 0.6742028, z: -0.0031368013}
+      rotation: {x: 0.50000006, y: 0.50000006, z: 0.49999997, w: 0.49999994}
+      scale: {x: -10.843145, y: -84.77934, z: -84.77934}
+    - name: NurbsPath.003
+      parentName: bulb(Clone)
+      position: {x: 0.17094298, y: 0.814414, z: -0.0031368013}
+      rotation: {x: 0.000000053385076, y: 0.7071068, z: 0.7071067, w: 0.000000053385076}
+      scale: {x: -8.065597, y: -88.5618, z: -88.5618}
+    - name: NurbsPath.004
+      parentName: bulb(Clone)
+      position: {x: -0.16786508, y: 0.814414, z: -0.0031368013}
+      rotation: {x: 0.000000053385076, y: 0.7071068, z: 0.7071067, w: 0.000000053385076}
+      scale: {x: -8.065597, y: -88.5618, z: -88.5618}
+    - name: Torus
+      parentName: bulb(Clone)
+      position: {x: -0.15588686, y: 0.8149535, z: -0.0033733165}
+      rotation: {x: 0.6820027, y: -0.0051639806, z: 0.73127204, w: 0.009326046}
+      scale: {x: 1.1226428, y: 1.1226428, z: 1.1226428}
+    - name: Torus.001
+      parentName: bulb(Clone)
+      position: {x: 0.15344219, y: 0.8149535, z: -0.0033733165}
+      rotation: {x: 0.6820027, y: -0.0051639806, z: 0.73127204, w: 0.009326046}
+      scale: {x: 1.1226428, y: 1.1226428, z: 1.1226428}
+    - name: 12683_hand_v1_FINAL.001
+      parentName: bulb(Clone)
+      position: {x: 0.36729765, y: 0.7973683, z: -0.0029006721}
+      rotation: {x: -0.72187865, y: 0.099889584, z: -0.018730525, w: 0.68451625}
+      scale: {x: 0.16115738, y: 0.16115738, z: 0.16115734}
+    - name: Vert.004
+      parentName: bulb(Clone)
+      position: {x: -0, y: 0.48604748, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 17.920233, y: 17.920233, z: 17.920233}
+    - name: NurbsPath.005
+      parentName: bulb(Clone)
+      position: {x: -0.022884449, y: 0.3137832, z: -0.003136799}
+      rotation: {x: 0.5000001, y: -0.49999997, z: -0.49999985, w: 0.50000006}
+      scale: {x: -6.656489, y: -88.5618, z: -88.5618}
+    - name: Object
+      parentName: bulb(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Object.001
+      parentName: bulb(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Object.002
+      parentName: bulb(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: left_shoe
+      parentName: bulb(Clone)
+      position: {x: 0.007221453, y: 0.15206395, z: 0.0115139205}
+      rotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+      scale: {x: 37.614067, y: 37.614067, z: 37.614067}
+    - name: right_shoe
+      parentName: bulb(Clone)
+      position: {x: -0.0052559823, y: 0.15206395, z: 0.0115139205}
+      rotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
+      scale: {x: 37.614067, y: 37.614067, z: 37.614067}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
