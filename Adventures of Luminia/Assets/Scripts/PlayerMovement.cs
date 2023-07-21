@@ -8,14 +8,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float rotationSpeed = 10f;
     [SerializeField] private Transform groundChecker;
     [SerializeField] private float jumpForce = 2f;
-
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask notPlayerMask;
 
     private Animator animator;
     private Rigidbody rb;
+    private CapsuleCollider collider;
+    private bool isGrounded;
 
     private void Start()
     {
+        collider = GetComponent<CapsuleCollider>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
@@ -46,14 +48,31 @@ public class PlayerMovement : MonoBehaviour
         {
             Crouch();
         }
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            UnCrouch();
+        }
 
+        if (Physics.CheckSphere(groundChecker.position, 0.3f, notPlayerMask))
+        {
+            animator.SetBool("isInAir", false);
+            isGrounded = true;
+        }
+        else
+        {
+            animator.SetBool("isInAir", true);
+            isGrounded = false;
+        }
     }
     void Jump()
     {
-        
-        if (Physics.Raycast(groundChecker.position, Vector3.down, 0.2f, groundLayer))
+        if (animator.GetBool("isCrouching"))
         {
-            
+            return;
+        }
+        if (isGrounded)
+        {
+            animator.SetTrigger("Jump");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
         else
@@ -64,9 +83,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Crouch()
     {
-        if (Physics.Raycast(groundChecker.position, Vector3.down, 0.2f, groundLayer))
+        if (isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            animator.SetBool("isCrouching", true);
+            speed = 1f;
+            collider.height = 0.7f;
+            collider.center = new Vector3(collider.center.x, 0.30f, collider.center.z);
         }
+    }
+
+    private void UnCrouch()
+    {
+        animator.SetBool("isCrouching", false);
+        speed = 2f;
+        collider.height = 1.25f;
+        collider.center = new Vector3(collider.center.x, 0.62f, collider.center.z);
+
     }
 }

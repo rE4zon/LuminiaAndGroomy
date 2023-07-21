@@ -135,7 +135,7 @@ GameObject:
   m_Layer: 6
   m_Name: GroundChecker
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -178,13 +178,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502883690}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.961, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0, y: 0, z: 0.001183901}
+  m_LocalScale: {x: 0.008394756, y: 0.008394758, z: 0.008394758}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1569702493}
-  m_Father: {fileID: 543450652890685621}
+  m_Father: {fileID: 5564780008342185021}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &502883692
@@ -440,7 +440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569702492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.001, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -459,7 +459,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8396226, g: 0.69455177, b: 0.31287822, a: 1}
-  m_Intensity: 3.17
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -764,7 +764,6 @@ Transform:
   - {fileID: 2651176318634335166}
   - {fileID: 3443962885356569129}
   - {fileID: 4613883288295589019}
-  - {fileID: 502883691}
   - {fileID: 145317499}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -2932,7 +2931,8 @@ Transform:
   m_LocalPosition: {x: -0, y: 0.81997144, z: 0}
   m_LocalScale: {x: 119.12198, y: 119.12198, z: 119.12198}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 502883691}
   m_Father: {fileID: 543450652890685621}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3108,13 +3108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f444f641624955848a93bafd01fb58cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   rotationSpeed: 15
   groundChecker: {fileID: 145317499}
   jumpForce: 5
-  groundLayer:
+  notPlayerMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 191
 --- !u!54 &5866666021107874514
 Rigidbody:
   m_ObjectHideFlags: 0
