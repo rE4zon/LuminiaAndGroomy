@@ -1,23 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+
+
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 2f;
-    [SerializeField] private float rotationSpeed = 10f;
-    [SerializeField] private Transform groundChecker;
-    [SerializeField] private float jumpForce = 2f;
-    [SerializeField] private LayerMask notPlayerMask;
+    
 
-    private Animator animator;
+    [SerializeField] public  float speed = 2f;
+    [SerializeField] private float rotationSpeed = 10f;
+    [SerializeField] public Transform groundChecker;
+    [SerializeField] private float jumpForce = 2f;
+    [SerializeField] public LayerMask notPlayerMask;
+
+    public Animator animator;
     private Rigidbody rb;
-    private CapsuleCollider collider;
+    public CapsuleCollider _collider;
     private bool isGrounded;
+
 
     private void Start()
     {
-        collider = GetComponent<CapsuleCollider>();
+        _collider = GetComponent<CapsuleCollider>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
@@ -63,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isInAir", true);
             isGrounded = false;
         }
+
     }
     void Jump()
     {
@@ -87,8 +92,8 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isCrouching", true);
             speed = 1f;
-            collider.height = 0.7f;
-            collider.center = new Vector3(collider.center.x, 0.30f, collider.center.z);
+            _collider.height = 0.7f;
+            _collider.center = new Vector3(_collider.center.x, 0.30f, _collider.center.z);
         }
     }
 
@@ -96,8 +101,12 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("isCrouching", false);
         speed = 2f;
-        collider.height = 1.25f;
-        collider.center = new Vector3(collider.center.x, 0.62f, collider.center.z);
+        _collider.height = 1.25f;
+        _collider.center = new Vector3(_collider.center.x, 0.62f, _collider.center.z);
 
     }
+
+   
+    
 }
+
