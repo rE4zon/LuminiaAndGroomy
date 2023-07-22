@@ -10,10 +10,10 @@ public class PlayerLight : MonoBehaviour
 
     private void Update()
     {
-        // ”становить позицию источника света равной позиции персонажа
+        
         playerLight.transform.position = transform.position;
 
-        // Ќастроить параметры источника света
+       
         playerLight.range = lightDistance;
         playerLight.intensity = lightIntensity;
     }
