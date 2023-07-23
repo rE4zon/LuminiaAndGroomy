@@ -85,14 +85,6 @@ public class IKActions : MonoBehaviour
         twistChainConstraint.weight = interpolatedWeightB;
     }
 
-    private void TurnOffIK()
-    {
-        currentInteractableObject = null;
-        leftHandPosition = Vector3.zero;
-        rightHandPosition = Vector3.zero;
-        leftHandRotation = Quaternion.identity;
-        rightHandRotation = Quaternion.identity;
-    }
 
     private void TryGrabInterctableObject()
     {
@@ -129,5 +121,13 @@ public class IKActions : MonoBehaviour
             }
             
         }
+    }
+    private void TurnOffIK()
+    {
+        currentInteractableObject = null;
+        leftHandPosition = Vector3.zero;
+        rightHandPosition = Vector3.zero;
+        leftHandRotation = Quaternion.identity;
+        rightHandRotation = Quaternion.identity;
     }
 }

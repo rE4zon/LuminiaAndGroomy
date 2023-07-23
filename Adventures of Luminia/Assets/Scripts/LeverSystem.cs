@@ -35,7 +35,7 @@ public class LeverSystem : InteractableObject
 
         
 
-        if (leverState >- 0.9f)
+        if (leverState >= 0.9f)
         {
             doorAnimator.SetBool("isDoorOpen", true);
         }
