@@ -6,26 +6,21 @@ using TMPro;
 public class LampSystem : MonoBehaviour
 {
     [SerializeField] private Light LampLight;
-    [SerializeField] private TMP_Text Text;
-    [SerializeField] private bool isOn;
     
+    private static bool isOn = false;
 
     private void Start()
     {
         LampLight.enabled = isOn;
         
-        Text.gameObject.SetActive(false); // Initially hide the text
     }
-
-    
 
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Text.gameObject.SetActive(true);
-
-            if (Input.GetKey(KeyCode.E))
+            
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 isOn = !isOn;
                 LampLight.enabled = isOn;
@@ -33,13 +28,7 @@ public class LampSystem : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Text.gameObject.SetActive(false);
-        }
-    }
+   
+
+   
 }
-
-

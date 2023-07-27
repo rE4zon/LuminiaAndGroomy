@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float camPositionSpeed = 10f;
     [SerializeField] private float verticalFollowSpeed = 5f;
     [SerializeField] private float maxHeightDistance = 5f;
-    [SerializeField] private float minHeightDistance = 2f; 
+    [SerializeField] private float minHeightDistance = 2f;
 
     private bool followPlayerVertically = false;
     private Vector3 targetPosition;
@@ -21,17 +21,22 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
         Vector3 desiredPosition = playerTransform.position + offset;
+
+        // Check for obstacles between player and camera
+        RaycastHit hit;
+        if (Physics.Raycast(playerTransform.position, offset.normalized, out hit, offset.magnitude, LayerMask.GetMask("Obstacle")))
+        {
+            desiredPosition = hit.point; // Move the camera to the hit point to avoid obstacles
+        }
+
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, camPositionSpeed * Time.deltaTime);
         transform.position = smoothedPosition;
 
-        
         if (followPlayerVertically)
         {
             float targetVerticalPosition = Mathf.Clamp(playerTransform.position.y, playerTransform.position.y - minHeightDistance, playerTransform.position.y + maxHeightDistance);
 
-            
             if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit groundHit, maxHeightDistance))
             {
                 float groundHeight = groundHit.point.y;
@@ -45,7 +50,6 @@ public class CameraController : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, targetPosition, verticalFollowSpeed * Time.deltaTime);
         }
 
-        
         transform.LookAt(playerTransform);
     }
 

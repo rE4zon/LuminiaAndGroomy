@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isCrouching", true);
             speed = 1f;
-            _collider.height = 0.7f;
+            _collider.height = 0.5f;
             _collider.center = new Vector3(_collider.center.x, 0.30f, _collider.center.z);
         }
     }

@@ -33,7 +33,7 @@ public class LeverSystem : InteractableObject
 
         animator.SetFloat("LeverState", leverState);
 
-        
+
 
         if (leverState >= 0.9f)
         {
@@ -45,5 +45,5 @@ public class LeverSystem : InteractableObject
             doorAnimator.SetBool("isDoorOpen", false);
         }
     }
-    
+
 }
