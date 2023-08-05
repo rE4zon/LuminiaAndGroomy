@@ -97,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e8a8aab156b3c45b54b9d2dbd9d8f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelID: 1
+  fadeImage: {fileID: 0}
+  fadeDuration: 1
+  nextSceneName: SecondLevel
 --- !u!65 &1781980801073636586
 BoxCollider:
   m_ObjectHideFlags: 0
