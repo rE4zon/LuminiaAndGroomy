@@ -6,19 +6,20 @@ public class CollisionChecker : MonoBehaviour
 {
     [SerializeField] private StaticAnchoredText StaticAnchoredText;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             StaticAnchoredText.ShowText();
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             StaticAnchoredText.HideText();
         }
     }
+
 }

@@ -7,6 +7,7 @@ public class PushingSystem : MonoBehaviour
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] private float ChangedRadius = 0.3622935f;
     [SerializeField] private float ChangedCenterZ = 0.2f;
+    
     bool isPushing;
     bool isInsideCollider;
 
@@ -27,6 +28,7 @@ public class PushingSystem : MonoBehaviour
 
     private void Start()
     {
+        
         isPushing = false;
     }
 
@@ -50,6 +52,7 @@ public class PushingSystem : MonoBehaviour
                 if (!isPushing)
                 {
                     StartPushing();
+                    
                 }
             }
             else
@@ -71,6 +74,7 @@ public class PushingSystem : MonoBehaviour
 
     private void StartPushing()
     {
+        
         isPushing = true;
         playerMovement.animator.SetBool("isPushing", true);
         playerMovement.speed = 0.75f;

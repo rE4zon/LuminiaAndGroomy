@@ -7,8 +7,10 @@ public class LeverSystem : InteractableObject
     private Animator animator;
     [SerializeField] public float leverState;
     [SerializeField] private Animator doorAnimator;
+    [SerializeField] private AudioSource audioSource;
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
 
@@ -37,6 +39,7 @@ public class LeverSystem : InteractableObject
 
         if (leverState >= 0.9f)
         {
+            audioSource.Play();
             doorAnimator.SetBool("isDoorOpen", true);
         }
 

@@ -17,7 +17,7 @@ public class DynamicAnchoredText : MonoBehaviour
 
     public void ShowText()
     {
-        StartCoroutine(ShowTextTimer(seconds));
+        StartCoroutine(ShowTextCoroutine(seconds));
     }
 
     private void Update()
@@ -26,12 +26,24 @@ public class DynamicAnchoredText : MonoBehaviour
         text.transform.position = textPosition;
     }
 
-    private IEnumerator ShowTextTimer(float seconds)
+    private IEnumerator ShowTextCoroutine(float seconds)
     {
+        // Плавное появление текста
+        for (float t = 0; t < 1; t += Time.deltaTime / seconds)
+        {
+            text.color = new Color(1f, 1f, 1f, t);
+            yield return null;
+        }
         text.color = new Color(1f, 1f, 1f, 1f);
 
         yield return new WaitForSeconds(seconds);
 
+        // Плавное исчезновение текста
+        for (float t = 1; t > 0; t -= Time.deltaTime / seconds)
+        {
+            text.color = new Color(1f, 1f, 1f, t);
+            yield return null;
+        }
         text.color = new Color(1f, 1f, 1f, 0f);
     }
 }
