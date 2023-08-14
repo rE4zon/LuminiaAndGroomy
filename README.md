@@ -19,7 +19,7 @@
 
 
 
-· Lever Sytem with using IK Bones
+· Lever Sytem using IK Bones
 
 
 ![Unity_AuLkV4lm2Q](https://github.com/rE4zon/LuminiaAndGroomy/assets/108632051/254a7ab1-65ac-46a9-bb14-f14f35bd8fb4)
